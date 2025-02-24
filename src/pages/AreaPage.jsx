@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 
-const EventsPage = () => {
+const AreaPage = () => {
     return (
         <div>
             <Navbar />
@@ -32,7 +32,7 @@ const EventsPage = () => {
 
             <div className="p-10 bg-[#E67E22] flex justify-center items-center text-[#fff] flex-col">
                 <h1 className="text-2xl font-semibold">Don’t wait—step into your divine calling now</h1>
-                <p className=" text-sm text-[#FFE6CF] w-[50%] text-center mt-3">Be part of a movement that empowers you spiritually and financially. Unlock exclusive resources, mentorship, and opportunities designed for believers like you</p>
+                <p className=" text-sm text-[#FFE6CF] md:w-[50%] text-center mt-3">Be part of a movement that empowers you spiritually and financially. Unlock exclusive resources, mentorship, and opportunities designed for believers like you</p>
                 <button className="bg-[#fff] text-[#E67E22] px-10 py-2 mt-3 rounded-full font-semibold cursor-pointer">Book a call</button>
             </div>
 
@@ -43,4 +43,4 @@ const EventsPage = () => {
     )
 }
 
-export default EventsPage
+export default AreaPage

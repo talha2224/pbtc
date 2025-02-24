@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Countries from '../assets/countries2.svg';
+import Team from '../assets/team.png';
 import { FaQuestionCircle, FaUsers, FaGift, FaGlobe, FaHandHoldingHeart } from 'react-icons/fa'; // Import icons
 import { CgArrowTopRight } from 'react-icons/cg';
 
-const TeamPage = () => {
+const AboutPage = () => {
     const [activeQuestion, setActiveQuestion] = useState(null);
 
     const faqData = [
@@ -44,20 +44,34 @@ const TeamPage = () => {
             <Navbar />
 
 
-            <div className='bg-[#000] px-5 py-10'>
-                <h1 className="text-5xl font-semibold text-[#fff] text-center">Spreading Love for God</h1>
-                <p className="mt-2 text-sm text-[#4E4E4E] text-center">Spreading the love for God and each other is what <br /> makes being part of a ministry so special.</p>
+            <div className="flex justify-center items-center flex-col py-16 bg-[#FCF1E8]">
+                <h1 className="text-5xl font-semibold">Who are we?</h1>
+                <p className="mt-2 text-sm text-[#4E4E4E] text-center">We love Jesus, we love people, and we’re on a mission of showing God’s love to the world.<br /> This website gives you an idea of who we are but best of all, come and visit!</p>
+                <img src={Team} alt="" className="mt-10" />
             </div>
 
 
-            <img className='h-[95vh] w-screen bg-no-repeat my-10' src={`https://s3-alpha-sig.figma.com/img/271a/752e/48de6783b13073b41c0d8689c0de6a77?Expires=1741564800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=oBv7ANzSePjwZ8TJnwza3TC67eDC5XGH1IXhdggazI56MfINCvlrsA3wLB46HF766KUmaQ-zEARJlkxXLntRXha9f5FQRYm8-vkyEI6dCVoLgcmtuEMsg5~dB9lWfrvWWcfOwJ8H7T5ZnHykISH-n21ZDXnUUQ~kCKt1StiO5ewFACIo9hh4c0PW6SRno9dEkb1n7YkKUQ9Zcfw9Q9zfiUcezmpTAyEunmCkMqY1Wzidnvih2WE8-GWnlT75Oy3981fc5SzEtUWbS~IZa-OLe6IzFgBkryBKQ-imVNuvJ-~1C9fE4~p9tXrMT-ada1Cv7umPu0s4d8wubwVn8EXqRw__`} alt="" />
-
-
-            <div className='flex justify-center items-center flex-col'>
-                <h1 className="text-xl font-semibold  text-center">Our Ministries</h1>
-                <img src={Countries} alt="" className='my-10 sm:w-[120vh] px-5' />
+            <div className="p-10 flex justify-center items-center flex-col bg-[#E8E8E8]">
+                <h1 className="text-xl font-semibold">Exciting Events Ahead Stay Connected and Get Involved</h1>
+                <div className="mt-10 flex justify-center items-center flex-col w-full bg-[#fff] p-5 rounded-xl">
+                    <div className="w-full max-w-2xl">
+                        {faqData.map((item, index) => (
+                            <div key={index} className="border border-gray-200 p-4 cursor-pointer mb-3 rounded-md">
+                                <div className="flex items-center justify-between" onClick={() => toggleQuestion(index)}>
+                                    <div className="flex items-center">
+                                        <div className=" rounded-md mr-3 w-[2rem] h-[2rem] border border-[#DADADA] flex justify-center items-center">{item.icon}</div>
+                                        <h2 className="text-lg font-semibold">{item.question}</h2>
+                                    </div>
+                                    <svg className={`w-6 h-6 transform transition-transform duration-300 ${activeQuestion === index ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                                {activeQuestion === index && (<div className="mt-4 text-gray-700 text-sm">{item.answer}</div>)}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-
 
             <div className="p-10 bg-[#E67E22] flex justify-center items-center text-[#fff] flex-col">
                 <h1 className="text-2xl font-semibold">Don’t wait—step into your divine calling now</h1>
@@ -71,4 +85,4 @@ const TeamPage = () => {
     )
 }
 
-export default TeamPage
+export default AboutPage

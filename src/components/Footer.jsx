@@ -31,11 +31,13 @@ const Footer = () => {
 
                 <div className='mt-2'>
                     <h1 className='text-lg font-semibold'>Our Team & Ministries</h1>
-                    <p className='mt-3 text-sm text-[#8D8D8C]'>Meet Our Team</p>
+                    <p className='mt-3 text-sm text-[#8D8D8C]'> <Link to={"/about"}>Meet Our Team</Link></p>
                     <p className='mt-3 text-sm text-[#8D8D8C]'>Who is the creator?</p>
                     <p className='mt-3 text-sm text-[#8D8D8C]'>Why Jesus /Yeshua</p>
                     <p className='mt-3 text-sm text-[#8D8D8C]'>Our Ministries & Messages</p>
-                    <p className='mt-3 text-sm text-[#8D8D8C]'>Resources & Search by area</p>
+                    <p className='mt-2'>
+                        <Link to={"/area"} className='text-sm text-[#8D8D8C]'>Resources & Search by area</Link>
+                    </p>
                 </div>
 
                 <div className='mt-2'>
