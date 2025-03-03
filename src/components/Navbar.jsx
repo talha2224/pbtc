@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Packages</Link>
         <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Membership</Link>
         <Link to={"/team"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Our Team & Ministry</Link>
-        <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Events & Timeline</Link>
+        <Link to={"/events"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Events & Timeline</Link>
         <Link to={"/contact"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Contact us</Link>
       </div>
 

@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage'
 import TeamPage from './pages/TeamPage'
 import AreaPage from './pages/AreaPage'
 import AboutPage from './pages/AboutPage'
+import EventsPage from './pages/EventsPage'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/team' element={<TeamPage/>} />
         <Route path='/area' element={<AreaPage/>} />
         <Route path='/about' element={<AboutPage/>} />
+        <Route path='/events' element={<EventsPage/>} />
       </Routes>
     </BrowserRouter>
   )
