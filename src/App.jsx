@@ -7,7 +7,10 @@ import TeamPage from './pages/TeamPage'
 import AreaPage from './pages/AreaPage'
 import AboutPage from './pages/AboutPage'
 import EventsPage from './pages/EventsPage'
-
+import MembershipPage from './pages/MembershipPage'
+import PackagesPage from './pages/PackagesPage'
+import MessagesPage from './pages/MessagesPage'
+import JesusPage from './pages/JesusPage'
 function App() {
 
   return (
@@ -19,6 +22,10 @@ function App() {
         <Route path='/area' element={<AreaPage/>} />
         <Route path='/about' element={<AboutPage/>} />
         <Route path='/events' element={<EventsPage/>} />
+        <Route path='/membership' element={<MembershipPage/>} />
+        <Route path='/packages' element={<PackagesPage/>} />
+        <Route path='/message' element={<MessagesPage/>} />
+        <Route path='/jesus' element={<JesusPage/>} />
       </Routes>
     </BrowserRouter>
   )

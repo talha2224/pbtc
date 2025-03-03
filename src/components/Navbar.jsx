@@ -13,8 +13,8 @@ const Navbar = () => {
       <div className='items-center gap-x-4 lg:flex hidden'>
         <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Home Page</Link>
         <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Product & Store</Link>
-        <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Packages</Link>
-        <Link to={"/"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Membership</Link>
+        <Link to={"/packages"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Packages</Link>
+        <Link to={"/membership"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Membership</Link>
         <Link to={"/team"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Our Team & Ministry</Link>
         <Link to={"/events"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Events & Timeline</Link>
         <Link to={"/contact"} className='hover:text-[#C6C4C4] cursor-pointer text-sm'>Contact us</Link>
